@@ -188,7 +188,7 @@ h2 em{font-style:normal;color:var(--red)}
   display:grid;grid-template-columns:1fr 1fr;min-height:560px;
   border-top:1px solid var(--line);
 }
-.row-img{position:relative;overflow:hidden;background:#F7F5F1 !important}
+.row-img{position:relative;overflow:hidden;background:#000000}
 
 .row.flip .row-img{order:2}
 .row.flip 
@@ -399,15 +399,20 @@ footer{background:var(--surface-2);border-top:1px solid var(--line);padding:5rem
 }
 
 /* ── CAROUSEL ── */
-.car{position:relative;width:100%;height:100%;overflow:hidden;background:#F7F5F1 !important}
+.car{position:relative;width:100%;height:100%;overflow:hidden;background:#000000}
 .car-track{
   display:flex;height:100%;
+  background:#000000;
   transition:transform .45s cubic-bezier(.4,0,.2,1);
   will-change:transform;
 }
 .car-track img{
   flex:0 0 100%;width:100%;height:100%;
-  object-fit:contain;background:#F7F5F1;filter:saturate(.92);
+  object-fit:contain;
+  padding:10%;
+  box-sizing:border-box;
+  background:#000000;
+  filter:saturate(.95);
 }
 .car-btn{
   position:absolute;top:50%;transform:translateY(-50%);z-index:4;
@@ -432,7 +437,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--line);padding:5rem
 
 @media (prefers-color-scheme: dark) {
   :root { color-scheme: light; }
-  body, .row-img, .car, .car-track img { background-color: #F7F5F1 !important; }
+  body { background-color: #F7F5F1 !important; }
 }
 
 </style>
